@@ -60,6 +60,70 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-Rebase-0" class="post-Rebase-0 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/07/15/Rebase-0/">Rebase</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/07/15/Rebase-0/" data-id="ciqnf53co0000igj4brew6cdq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>#####1. 更新master到最新<br>cd project_dir</p>
+<p>git checkout master</p>
+<p>git pull origin master</p>
+<p>#####2. 开始开发task-1186<br>git checkout -b task-1186</p>
+<p>#####3. 提交<br>git commit -am “for #1186 xxxxx”</p>
+<p>//或者</p>
+<p>git add .</p>
+<p>git commit -m“for #1186 xxxxx”</p>
+<p>#####4. rebase最新的master</p>
+<p>git checkout master</p>
+<p>git pull</p>
+<p>git checkout task-1186</p>
+<p>git rebase master</p>
+<p>//<br>有冲突的时候 先解决冲突  </p>
+<p>git  add .</p>
+<p>git rebase –continue</p>
+<p>//</p>
+<p>git checkout master</p>
+<p>git merge task-1186</p>
+<p>#####5. 将master推送到远程<br>git push</p>
+<p>#####6. 删除本地分支<br>git branch -d task-1186</p>
+<p>回到第2步</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/07/15/Rebase-0/">
+    <time datetime="2016-07-15T07:23:38.000Z" class="entry-date">
+        2016-07-15
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="post-hello-world post type-post status-publish format-standard hentry">
     <!---->
 
@@ -75,7 +139,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/07/15/hello-world/" data-id="ciqneyssf0000f9j4ukfs4yeu" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/07/15/hello-world/" data-id="ciqnf53cu0001igj4xds7h71b" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -132,6 +196,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget-content">
       <ul>
+        
+          <li>
+            <a href="/2016/07/15/Rebase-0/">Rebase</a>
+          </li>
         
           <li>
             <a href="/2016/07/15/hello-world/">Hello World</a>
